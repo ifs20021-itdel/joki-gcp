@@ -1,6 +1,6 @@
-steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy', 'app.yaml']
-    timeout: '1600s'  
+timeout: '1200s'  # 20 menit untuk seluruh proses build
 
-timeout: '300s'  
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', 'app.yaml']
+  timeout: '600s'  # 10 menit, kurang dari 20 menit
