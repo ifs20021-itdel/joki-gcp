@@ -3,4 +3,4 @@ steps:
     args: ['app', 'deploy', 'app.yaml']
     timeout: '1600s'  
 
-timeout: '1200s'  
+timeout: '600s'  
