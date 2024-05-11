@@ -1,0 +1,15 @@
+runtime: php74  # Sesuaikan dengan versi PHP yang Anda gunakan
+entrypoint: serve index.php  # Spesifikasikan file yang akan dijalankan sebagai entrypoint
+
+handlers:
+  # Tangani semua URL untuk dijalankan melalui script PHP secara otomatis
+  - url: /.*
+    script: auto
+
+  # Konfigurasi tambahan mungkin diperlukan tergantung pada kebutuhan spesifik aplikasi Anda
+
+env_variables:
+  # Definisikan variabel lingkungan yang dibutuhkan oleh aplikasi
+  MYSQL_DSN: 'mysql:host=hostname;dbname=databasename'
+  MYSQL_USER: 'username'
+  MYSQL_PASSWORD: 'password'
